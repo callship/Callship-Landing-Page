@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #FFFFFF;
+    --bg-surface: #FFFFFF;
+    --bg-surface-subtle: #F8F9FA;
+    --bg-elevated: #FFFFFF;
+    --border-subtle: #E5E7EB;
+    --border-strong: #D1D5DB;
+    --text-primary: #111827;
+    --text-secondary: #4B5563;
+    --text-tertiary: #6B7280;
+    --accent-primary: #1E293B;
+    --accent-warm: #B45309;
+    --accent-emerald: #059669;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--bg-canvas);
+    color: var(--text-primary);
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Strict Clean Light Surface Architecture */
+.app-surface {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+.app-surface-elevated {
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+}
+
+.app-surface-interactive {
+  background-color: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  transition: border-color 160ms cubic-bezier(0.16, 1, 0.3, 1), background-color 160ms cubic-bezier(0.16, 1, 0.3, 1), transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+}
+
+.app-surface-interactive:hover {
+  background-color: #F9FAFB;
+  border-color: #CBD5E1;
+}
+
+/* Kinetic Utility Transitions */
+.snappy-transition {
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Precise Pacing Timer (Calm 8s Cycle) */
+@keyframes pacing-circle {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+.animate-pacing-breathe {
+  animation: pacing-circle 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Orbital rotation */
+@keyframes orbital-rotation {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-orbital-slow {
+  animation: orbital-rotation 70s linear infinite;
+}
+
+/* Custom Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+

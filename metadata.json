@@ -1,0 +1,6 @@
+{
+  "name": "Callship - ADHD-Friendly Friendship Companion",
+  "description": "The low-pressure, 100% free ADHD-friendly friendship companion featuring micro-call sprints, shame-free resets, cosmic solar system visualization, and gamification with optional coffee support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
